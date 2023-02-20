@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "560501690123",
+    "project_id": "videomeeting-37556",
+    "storage_bucket": "videomeeting-37556.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560501690123:android:78809a7b530f5b6a841c0e",
+        "android_client_info": {
+          "package_name": "com.example.videoconferencing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDppTKgux8LC5uIx4uLA-_Pb6ln3jwhkcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560501690123:android:8447d311c58b8825841c0e",
+        "android_client_info": {
+          "package_name": "com.example.videomeet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDppTKgux8LC5uIx4uLA-_Pb6ln3jwhkcA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
