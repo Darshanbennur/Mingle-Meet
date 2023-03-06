@@ -67,6 +67,7 @@ class SignUpActivity : AppCompatActivity() {
         insert[Constants.KEY_NAME] = user.Name
         insert[Constants.KEY_EMAIL] = user.Email
         insert[Constants.KEY_PASSWORD] = user.Password
+        insert["isOnline"] = true
 
         database.collection(Constants.KEY_COLLECTION_USERS)
             .add(insert)
@@ -76,7 +77,7 @@ class SignUpActivity : AppCompatActivity() {
                 preferenceManager.putString(Constants.KEY_NAME, user.Name)
                 preferenceManager.putString(Constants.KEY_EMAIL, user.Email)
                 preferenceManager.putString(Constants.KEY_PASSWORD, user.Password)
-                var intent = Intent(applicationContext, MainActivity::class.java)
+                var intent = Intent(applicationContext, HomeActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)

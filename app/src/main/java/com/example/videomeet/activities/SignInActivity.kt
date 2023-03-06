@@ -26,7 +26,7 @@ class SignInActivity : AppCompatActivity() {
         preferenceManager = PreferenceManager(applicationContext)
 
         if (preferenceManager.getBoolean(Constants.KEY_IS_SINGED_IN)){
-            var intent = Intent(applicationContext, MainActivity::class.java)
+            var intent = Intent(applicationContext, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -73,7 +73,7 @@ class SignInActivity : AppCompatActivity() {
                     preferenceManager.putString(Constants.KEY_USER_ID, documentSnapshot.id)
                     preferenceManager.putString(Constants.KEY_NAME, documentSnapshot.getString(Constants.KEY_NAME))
                     preferenceManager.putString(Constants.KEY_EMAIL, documentSnapshot.getString(Constants.KEY_EMAIL))
-                    var intent = Intent(applicationContext, MainActivity::class.java)
+                    var intent = Intent(applicationContext, HomeActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     startActivity(intent)

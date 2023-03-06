@@ -14,6 +14,7 @@ import com.example.videomeet.databinding.ActivitySignInBinding
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding
+    private var currentFragmentChecker : Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,20 +24,38 @@ class HomeActivity : AppCompatActivity() {
         binding.bottomNavView.background = null
         binding.bottomNavView.menu.getItem(2).isEnabled = false
         replaceFragment(FriendsFragment())
+        currentFragmentChecker = R.id.Home
 
         binding.bottomNavView.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.Home -> replaceFragment(FriendsFragment())
-                R.id.pings -> replaceFragment(NotificationFragment())
-                R.id.connect -> replaceFragment(ConnectFragment())
-                R.id.profile -> replaceFragment(ProfileFragment())
+            if(it.itemId != currentFragmentChecker){
+                when(it.itemId){
+                    R.id.Home -> {
+                        replaceFragment(FriendsFragment())
+                        currentFragmentChecker = R.id.Home
+                    }
+                    R.id.pings -> {
+                        replaceFragment(NotificationFragment())
+                        currentFragmentChecker = R.id.pings
+                    }
+                    R.id.connect -> {
+                        replaceFragment(ConnectFragment())
+                        currentFragmentChecker = R.id.connect
+                    }
+                    R.id.profile -> {
+                        replaceFragment(ProfileFragment())
+                        currentFragmentChecker = R.id.profile
+                    }
+                    else -> {
 
-                else -> {
-
+                    }
                 }
+            } else {
+                //something if the fragment was same
             }
             true
         }
+
+
 
     }
 

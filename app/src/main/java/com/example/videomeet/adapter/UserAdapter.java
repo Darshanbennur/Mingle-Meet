@@ -47,7 +47,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     class UserViewHolder extends RecyclerView.ViewHolder {
 
         TextView textFirstChar, textUsername, textEmail;
-        ImageView imageAudioMeeting, imageVideoMeeting;
+        ImageView imageAudioMeeting, imageVideoMeeting, Online;
 
 
         UserViewHolder(@NonNull View itemView) {
@@ -58,6 +58,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
 
             imageAudioMeeting = itemView.findViewById(R.id.imageCall);
             imageVideoMeeting = itemView.findViewById(R.id.imageVideo);
+            Online = itemView.findViewById(R.id.isOnline);
         }
 
         void setUserData(User user) {
@@ -66,6 +67,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
             textEmail.setText(user.Email);
             imageAudioMeeting.setOnClickListener(view -> userListeners.initiateAudioMeeting(user));
             imageVideoMeeting.setOnClickListener(view -> userListeners.initiateVideoMeeting(user));
+            if (user.isOnline){
+                Online.setImageResource(R.drawable.online_green);
+            }
         }
 
     }

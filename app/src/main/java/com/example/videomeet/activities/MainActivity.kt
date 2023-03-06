@@ -13,20 +13,16 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
-import com.example.videomeet.R
 import com.example.videomeet.adapter.UserAdapter
 import com.example.videomeet.databinding.ActivityMainBinding
-import com.example.videomeet.databinding.ActivitySignInBinding
 import com.example.videomeet.listeners.UserListeners
 import com.example.videomeet.models.User
 import com.example.videomeet.utilities.Constants
 import com.example.videomeet.utilities.PreferenceManager
 import com.google.firebase.firestore.DocumentReference
-import com.google.firebase.firestore.FieldPath
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.QueryDocumentSnapshot
-import com.google.firebase.iid.FirebaseInstanceIdReceiver
 import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity(), UserListeners {
@@ -120,10 +116,12 @@ class MainActivity : AppCompatActivity(), UserListeners {
                     else{
                         binding.errorMessage.text = "No Users available"
                         binding.errorMessage.visibility = View.VISIBLE
+                        binding.animater.visibility = View.VISIBLE
                     }
                 } else{
                     binding.errorMessage.text = "No Users available"
                     binding.errorMessage.visibility = View.VISIBLE
+                    binding.animater.visibility = View.VISIBLE
                 }
             }
     }

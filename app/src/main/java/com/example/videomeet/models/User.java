@@ -7,6 +7,7 @@ public class User implements Serializable {
     public String Email;
     public String Password;
     public String Token;
+    public boolean isOnline;
 
     public User(){
 

@@ -1,100 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="horizontal"
     android:padding="@dimen/_5sdp">
 
-    <TextView
-        android:id="@+id/TextFirstChar"
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
-        android:background="@drawable/profile_picture_alternative"
-        android:fontFamily="@font/andika"
-        android:gravity="center"
-        android:includeFontPadding="false"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_15ssp"
-        app:layout_constraintBottom_toTopOf="@+id/viewDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        
+        <TextView
+            android:id="@+id/TextFirstChar"
+            android:layout_width="@dimen/_33sdp"
+            android:layout_height="@dimen/_33sdp"
+            android:background="@drawable/profile_picture_alternative"
+            android:fontFamily="@font/andika"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15ssp"/>
 
-    <View
-        android:id="@+id/viewSupporter"
-        android:layout_width="1dp"
-        android:layout_height="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/TextFirstChar"
-        app:layout_constraintStart_toEndOf="@+id/TextFirstChar"
-        app:layout_constraintTop_toTopOf="@+id/TextFirstChar"/>
+        <ImageView
+            android:id="@+id/isOnline"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:src="@drawable/online"/>
+        
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/userNameTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/andika"
-        android:includeFontPadding="false"
-        android:text="UserName"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_12ssp"
-        app:layout_constraintEnd_toStartOf="@+id/imageCall"
-        app:layout_constraintHorizontal_bias="0.066"
-        app:layout_constraintStart_toEndOf="@+id/TextFirstChar"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/userEmailTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
-        android:layout_marginBottom="10dp"
-        android:text="abc@gmail.com"
-        android:layout_marginStart="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/viewDivider"
-        app:layout_constraintEnd_toStartOf="@+id/imageCall"
-        app:layout_constraintHorizontal_bias="0.407"
-        app:layout_constraintStart_toEndOf="@+id/TextFirstChar"
-        app:layout_constraintTop_toBottomOf="@+id/userNameTemp"
-        app:layout_constraintVertical_bias="0.0" />
+        <LinearLayout
+            android:id="@+id/namingUser"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/_5sdp">
+            
+            <TextView
+                android:id="@+id/userNameTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/andika"
+                android:includeFontPadding="false"
+                android:text="UserName"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"/>
 
-    <ImageView
-        android:id="@+id/imageVideo"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginEnd="25dp"
-        android:padding="@dimen/_2sdp"
-        android:src="@drawable/ic_video"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/teal_700" />
+            <TextView
+                android:id="@+id/userEmailTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abc@gmail.com" />
 
-    <ImageView
-        android:id="@+id/imageCall"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginEnd="20dp"
-        android:padding="@dimen/_2sdp"
-        android:src="@drawable/ic_phone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageVideo"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/viewSupporter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/teal_700" />
+        </LinearLayout>
 
-    <View
-        android:id="@+id/viewDivider"
-        android:layout_width="0dp"
-        android:layout_height="2dp"
-        android:background="@color/teal_700"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TextFirstChar" />
+        <LinearLayout
+            android:id="@+id/callingFeature"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageVideo"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="25dp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_video"
+                app:tint="@color/app_theme" />
+
+            <ImageView
+                android:id="@+id/imageCall"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginEnd="20dp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_phone"
+                app:tint="@color/app_theme" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

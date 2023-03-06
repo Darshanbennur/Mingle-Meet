@@ -2,13 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/Home"
-        android:title="Home"
-        android:icon="@drawable/ic_baseline_home_24"/>
+        android:title="Friends"
+        android:icon="@drawable/friends"/>
 
     <item
         android:id="@+id/pings"
         android:title="Pings"
-        android:icon="@drawable/ic_baseline_notifications_24"/>
+        android:icon="@drawable/notifications_google"/>
 
     <item
         android:id="@+id/placeHolder"
@@ -16,11 +16,11 @@
 
     <item
         android:id="@+id/connect"
-        android:title="Connect"
-        android:icon="@drawable/ic_baseline_connect_without_contact_24"/>
+        android:title="Hub"
+        android:icon="@drawable/hub"/>
 
     <item
         android:id="@+id/profile"
         android:title="Profile"
-        android:icon="@drawable/ic_person"/>
+        android:icon="@drawable/person_pin"/>
 </menu>
