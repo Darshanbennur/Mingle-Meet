@@ -14,7 +14,7 @@
         android:layout_height="@dimen/_150sdp"
         android:gravity="center"
         android:orientation="vertical"
-        android:background="@color/teal_200">
+        android:background="@color/app_theme">
 
         <TextView
             android:layout_width="wrap_content"
@@ -29,8 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/andika"
-            android:text="Video Meeting | Conferencing App"
-            android:textColor="@color/black"
+            android:text="Mingle Meet"
+            android:textColor="@color/white"
             android:textSize="@dimen/_15sdp"/>
 
     </LinearLayout>
@@ -50,6 +50,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:gravity="center_horizontal">
 
         <LinearLayout
@@ -166,7 +167,41 @@
                     android:textSize="15dp" />
 
             </LinearLayout>
+
         </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_20sdp"/>
+
+       <LinearLayout
+           android:id="@+id/google_singIn"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:background="@drawable/google_button_wrapper"
+           android:paddingTop="@dimen/_7sdp"
+           android:paddingBottom="@dimen/_7sdp"
+           android:paddingStart="@dimen/_10sdp"
+           android:paddingEnd="@dimen/_10sdp"
+           android:gravity="center">
+
+           <ImageButton
+               android:layout_width="@dimen/_30sdp"
+               android:layout_height="@dimen/_30sdp"
+               android:background="@drawable/google_icon"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_6sdp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/andika"
+               android:includeFontPadding="false"
+               android:textSize="@dimen/_13sdp"
+               android:text="Continue with Google"/>
+
+       </LinearLayout>
 
     </LinearLayout>
 

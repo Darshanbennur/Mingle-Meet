@@ -79,10 +79,6 @@ class FriendsFragment : Fragment(), UserListeners {
         return binding.root
     }
 
-    private fun onlineStatus(){
-
-    }
-
     private fun filterList(query: String?) {
         filteredList.clear()
         if (query != null){

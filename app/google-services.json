@@ -7,35 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:560501690123:android:78809a7b530f5b6a841c0e",
-        "android_client_info": {
-          "package_name": "com.example.videoconferencing"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDppTKgux8LC5uIx4uLA-_Pb6ln3jwhkcA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:560501690123:android:8447d311c58b8825841c0e",
         "android_client_info": {
           "package_name": "com.example.videomeet"
@@ -43,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+          "client_id": "560501690123-rordhu5rlru3745s80a5rl4id28dbh1r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.videomeet",
+            "certificate_hash": "245aed1b3d7bcade5fd31c6808ea060adf11f325"
+          }
+        },
+        {
+          "client_id": "560501690123-6n47rn2kl5i79h9mh50csvh1b4knu3ua.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -56,7 +35,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "560501690123-98agojinfkj579fkh5fqpqfa6tf5glvu.apps.googleusercontent.com",
+              "client_id": "560501690123-6n47rn2kl5i79h9mh50csvh1b4knu3ua.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
