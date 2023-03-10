@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import androidx.core.text.TextDirectionHeuristicsCompat.LOCALE
 import androidx.recyclerview.widget.RecyclerView
 import com.example.videomeet.activities.OutgoingCall
 import com.example.videomeet.adapter.UserAdapter
@@ -26,7 +25,7 @@ class FriendsFragment : Fragment(), UserListeners {
 
     private var _binding: FragmentFriendsBinding? = null
     private val binding get() = _binding!!
-    lateinit var filteredList : ArrayList<User>
+    private lateinit var filteredList : ArrayList<User>
 
 //    var REQUEST_CODE_BATTERY_OPTIMIZATION : Int = 1
 
@@ -112,14 +111,14 @@ class FriendsFragment : Fragment(), UserListeners {
             .get()
             .addOnCompleteListener {
                 binding.swipeRefresh.isRefreshing = false
-                var myUserId = preferenceManager.getString(Constants.KEY_USER_ID)
+                val myUserId = preferenceManager.getString(Constants.KEY_USER_ID)
                 if (it.isSuccessful && it.result != null){
                     userList.clear()
                     for (documentSnap : QueryDocumentSnapshot in it.result){
                         if (myUserId.equals(documentSnap.id)){
                             continue
                         }
-                        var user = User()
+                        val user = User()
                         user.Name = documentSnap.getString(Constants.KEY_NAME)
                         user.Email = documentSnap.getString(Constants.KEY_EMAIL)
                         user.Token = documentSnap.getString(Constants.KEY_FCM_TOKEN)
@@ -164,7 +163,7 @@ class FriendsFragment : Fragment(), UserListeners {
                 Toast.LENGTH_SHORT
             ).show()
         }else {
-            var intent = Intent(activity, OutgoingCall::class.java)
+            val intent = Intent(activity, OutgoingCall::class.java)
             intent.putExtra("user", user)
             intent.putExtra("type", "video")
             startActivity(intent)

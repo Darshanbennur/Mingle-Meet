@@ -172,10 +172,23 @@
 
         <Space
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_20sdp"/>
+            android:layout_height="@dimen/_15sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OR"
+            android:textColor="@color/black"
+            android:fontFamily="@font/andika"
+            android:includeFontPadding="false"
+            android:textSize="@dimen/_10sdp"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_15sdp"/>
 
        <LinearLayout
-           android:id="@+id/google_singIn"
+           android:id="@+id/google_signIn"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:orientation="horizontal"

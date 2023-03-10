@@ -87,7 +87,7 @@ class SignUpActivity : AppCompatActivity() {
                                 preferenceManager.putString(Constants.KEY_USER_ID, it.id)
                                 preferenceManager.putString(Constants.KEY_NAME, user.Name)
                                 preferenceManager.putString(Constants.KEY_EMAIL, user.Email)
-                                var intent = Intent(applicationContext, HomeActivity::class.java)
+                                val intent = Intent(applicationContext, HomeActivity::class.java)
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                 startActivity(intent)
