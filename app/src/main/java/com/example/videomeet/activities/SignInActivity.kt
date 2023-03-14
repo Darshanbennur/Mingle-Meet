@@ -90,6 +90,9 @@ class SignInActivity : AppCompatActivity() {
     }
 
     private fun signInWithGoogle(){
+        binding.googleSignIn.visibility = View.INVISIBLE
+        binding.progressBarEmail.visibility = View.VISIBLE
+
         val signInIntent = googleSignInClient.signInIntent
         launcher.launch(signInIntent)
     }
@@ -139,8 +142,8 @@ class SignInActivity : AppCompatActivity() {
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                                         startActivity(intent)
                                     } else{
-                                        binding.progressBar.visibility = View.INVISIBLE
-                                        binding.loginButton.visibility = View.VISIBLE
+                                        binding.progressBarEmail.visibility = View.INVISIBLE
+                                        binding.googleSignIn.visibility = View.VISIBLE
                                         Toast.makeText(applicationContext,"Unable to Login", Toast.LENGTH_SHORT).show()
                                     }
                                 }
@@ -175,6 +178,8 @@ class SignInActivity : AppCompatActivity() {
                                 }
                         }
                     }else {
+                        binding.progressBarEmail.visibility = View.INVISIBLE
+                        binding.googleSignIn.visibility = View.VISIBLE
                         Toast.makeText(applicationContext,it.exception.toString(), Toast.LENGTH_SHORT).show()
                     }
                 }

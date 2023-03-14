@@ -50,7 +50,7 @@ class FriendsFragment : Fragment(), UserListeners {
         filteredList = ArrayList()
 
         binding.searchView.clearFocus()
-        binding.searchView.queryHint = "Search Here ..."
+        binding.searchView.queryHint = "Search Contacts"
 
         binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(p0: String?): Boolean {

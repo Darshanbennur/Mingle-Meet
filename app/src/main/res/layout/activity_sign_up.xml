@@ -14,23 +14,23 @@
         android:layout_height="@dimen/_150sdp"
         android:gravity="center"
         android:orientation="vertical"
-        android:background="@color/teal_200">
+        android:background="@color/app_theme">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/andika"
             android:text="Welcome to"
+            android:fontFamily="@font/andika"
             android:textColor="@color/black"
-            android:textSize="@dimen/_15sdp" />
+            android:textSize="@dimen/_15sdp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/andika"
-            android:text="Video Meeting | Conferencing App"
-            android:textColor="@color/black"
+            android:text="Mingle Meet"
+            android:textColor="@color/white"
             android:textSize="@dimen/_15sdp"/>
 
     </LinearLayout>

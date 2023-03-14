@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragments.FriendsFragment">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,66 +13,55 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="@dimen/_12sdp"
-            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/top_nav_bar"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
             android:paddingStart="@dimen/_8sdp"
             android:paddingEnd="@dimen/_8sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:background="@drawable/search_bar"
+                android:backgroundTint="@color/white"
+                android:padding="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                app:queryHint="Search Contacts" />
+
             <TextView
-                android:id="@+id/fragmentTitle"
+                android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:fontFamily="@font/andika"
-                android:text="Contacts"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/poppins"
+                android:includeFontPadding="false"
+                android:text="Hey, UserName"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_15ssp"
-                tools:ignore="Suspicious0dp" />
+                android:textSize="@dimen/_14sdp" />
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/title"
-            android:layout_width="150dp"
+        <LinearLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/andika"
-            android:includeFontPadding="false"
-            android:text="Hey, Darshan"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_14sdp"
-            app:layout_constraintBottom_toTopOf="@+id/swipeRefresh"
-            app:layout_constraintEnd_toStartOf="@+id/searchView"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:layout_constraintVertical_bias="0.269" />
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView"
-            android:layout_width="228dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/search_bar"
-            android:padding="2dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            app:queryHint="Search Here ..." />
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        </LinearLayout>
+
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/swipeRefresh"
@@ -81,7 +69,7 @@
             android:layout_height="0dp"
             android:layout_marginTop="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/searchView">
+            app:layout_constraintTop_toBottomOf="@id/nameLayout">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
@@ -96,11 +84,11 @@
             android:id="@+id/animater"
             android:layout_width="@dimen/_200sdp"
             android:layout_height="@dimen/_200sdp"
-            android:layout_marginTop="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_50sdp"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:layout_constraintTop_toBottomOf="@+id/nameLayout"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"
             app:lottie_rawRes="@raw/not_found" />
@@ -109,7 +97,7 @@
             android:id="@+id/errorMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:fontFamily="@font/andika"
             android:gravity="center"
             android:includeFontPadding="false"
